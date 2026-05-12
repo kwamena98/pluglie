@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Plug, Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -9,8 +9,11 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="container navbar-inner">
-        <a href="#top" className="brand" onClick={close} aria-label="Pluglie home">
-          <img src="/logo.png" alt="Pluglie" className="brand-logo" />
+        <a href="#top" className="brand" onClick={close}>
+          <span className="brand-mark">
+            <Plug size={18} strokeWidth={2.5} />
+          </span>
+          Pluglie
         </a>
 
         <nav className={`nav-links ${open ? 'open' : ''}`}>

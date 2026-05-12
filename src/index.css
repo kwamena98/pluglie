@@ -180,24 +180,15 @@ p {
   color: var(--color-primary);
 }
 
-.brand-logo {
-  height: 40px;
-  width: auto;
-  display: block;
-  max-width: 200px;
-  object-fit: contain;
-}
-
-/* Used in the footer if no /logo-light.png is provided — wraps the dark logo
-   in a small white pill so it stays visible on the navy background. */
-.brand-logo-on-dark {
-  background: #fff;
-  padding: 6px 12px;
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background: var(--color-primary);
   border-radius: 10px;
-  height: 36px;
+  color: var(--color-accent);
 }
-
-.footer .brand-logo { height: 36px; }
 
 .nav-links {
   display: flex;

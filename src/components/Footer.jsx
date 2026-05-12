@@ -1,31 +1,17 @@
-import { Twitter, Linkedin, Github, Instagram } from 'lucide-react'
+import { Plug, Twitter, Linkedin, Github, Instagram } from 'lucide-react'
 
 export default function Footer() {
   const year = new Date().getFullYear()
-
-  // Footer uses the dark navy background, so we try a "light" version of the
-  // logo first if you provide one (drop /logo-light.png in public/). If not,
-  // we fall back to the regular logo on a small white pill so it stays visible.
-  const handleLogoError = (e) => {
-    if (!e.currentTarget.dataset.fallback) {
-      e.currentTarget.dataset.fallback = '1'
-      e.currentTarget.src = '/logo.png'
-      e.currentTarget.classList.add('brand-logo-on-dark')
-    }
-  }
-
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
           <div>
             <div className="brand">
-              <img
-                src="/logo-light.png"
-                alt="Pluglie"
-                className="brand-logo"
-                onError={handleLogoError}
-              />
+              <span className="brand-mark">
+                <Plug size={18} strokeWidth={2.5} />
+              </span>
+              Pluglie
             </div>
             <p className="footer-about">
               We build functional ecommerce stores and standalone CRMs that help teams compound

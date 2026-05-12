@@ -16,7 +16,6 @@ const initial = {
   whatsapp: '',
   company: '',
   service: 'ecommerce',
-  budget: '5k-15k',
   message: '',
 }
 
@@ -91,7 +90,6 @@ export default function Contact() {
           whatsapp: form.whatsapp,
           company: form.company,
           service: form.service,
-          budget: form.budget,
           message: form.message,
           _subject: `New Pluglie inquiry from ${form.name}`,
           _replyto: form.email,
@@ -104,12 +102,12 @@ export default function Contact() {
         const data = await res.json().catch(() => ({}))
         const msg =
           data?.errors?.[0]?.message ||
-          'We couldn’t send your message. Please try again or email hello@pluglie.com directly.'
+          'We couldn’t send your message. Please try again or email awuraama12dadson@gmail.com directly.'
         setSubmitError(msg)
       }
     } catch {
       setSubmitError(
-        'Network error — please check your connection and try again, or email hello@pluglie.com.'
+        'Network error — please check your connection and try again, or email awuraama12dadson@gmail.com.'
       )
     } finally {
       setSubmitting(false)
@@ -132,14 +130,21 @@ export default function Contact() {
               <div className="contact-item-icon"><Mail size={18} /></div>
               <div>
                 <div className="contact-item-label">Email</div>
-                <div className="contact-item-value">hello@pluglie.com</div>
+                <a
+                  href="mailto:awuraama12dadson@gmail.com"
+                  className="contact-item-value"
+                >
+                  awuraama12dadson@gmail.com
+                </a>
               </div>
             </div>
             <div className="contact-item">
               <div className="contact-item-icon"><Phone size={18} /></div>
               <div>
                 <div className="contact-item-label">Phone</div>
-                <div className="contact-item-value">+1 (555) 010-2024</div>
+                <a href="tel:+233557449392" className="contact-item-value">
+                  +233 557 449 392
+                </a>
               </div>
             </div>
             <div className="contact-item">
@@ -226,37 +231,20 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="form-row">
-            <div className="field">
-              <label htmlFor="service">What do you need?</label>
-              <select
-                id="service"
-                name="service"
-                value={form.service}
-                onChange={update('service')}
-                disabled={submitting}
-              >
-                <option value="ecommerce">Ecommerce website + admin panel</option>
-                <option value="crm">CRM system (client management)</option>
-                <option value="both">Both — ecommerce + CRM</option>
-                <option value="other">Something else</option>
-              </select>
-            </div>
-            <div className="field">
-              <label htmlFor="budget">Estimated budget</label>
-              <select
-                id="budget"
-                name="budget"
-                value={form.budget}
-                onChange={update('budget')}
-                disabled={submitting}
-              >
-                <option value="under-5k">Under $5,000</option>
-                <option value="5k-15k">$5,000 – $15,000</option>
-                <option value="15k-50k">$15,000 – $50,000</option>
-                <option value="50k-plus">$50,000+</option>
-              </select>
-            </div>
+          <div className="field">
+            <label htmlFor="service">What do you need?</label>
+            <select
+              id="service"
+              name="service"
+              value={form.service}
+              onChange={update('service')}
+              disabled={submitting}
+            >
+              <option value="ecommerce">Ecommerce website + admin panel</option>
+              <option value="crm">CRM system (client management)</option>
+              <option value="both">Both — ecommerce + CRM</option>
+              <option value="other">Something else</option>
+            </select>
           </div>
 
           <div className="field">
