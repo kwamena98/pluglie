@@ -26,6 +26,17 @@ npm run dev
 
 Open the URL Vite prints (default `http://localhost:5173`).
 
+## Branding & assets
+
+Drop these files into the `public/` folder. Only `logo.png` is required — the rest are optional but recommended.
+
+| File              | Used for                                          | Notes                                    |
+| ----------------- | ------------------------------------------------- | ---------------------------------------- |
+| `logo.png`        | Navbar + footer brand, favicon, OG/Twitter image  | **Required.** Your full logo (icon + wordmark). |
+| `logo-light.png`  | Footer logo on dark navy background               | Optional. A light/white version. If absent, the footer falls back to `logo.png` on a white pill. |
+| `og-image.png`    | Social link previews (1200×630)                   | Optional. Wider banner. If absent, `logo.png` is used. To enable, edit `index.html` and change the OG/Twitter `image` tags. |
+| `favicon.ico`     | Older browsers                                    | Optional. Modern browsers use `logo.png` from the link tag. |
+
 ## Contact form (Formspree)
 
 The contact form posts to [Formspree](https://formspree.io). To enable real submissions:
