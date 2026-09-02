@@ -18,7 +18,7 @@ const services = [
       'Fast, conversion-focused storefronts with every payment plugin you need — Stripe, Paystack, PayPal, Apple Pay and more — paired with a full admin panel to manage products, orders, customers and inventory.',
     image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=900&q=80',
     bullets: [
-      { icon: CreditCard, text: 'Stripe, Paystack & 25+ gateways' },
+      { icon: CreditCard, text: 'Stripe, Paystack & other gateways' },
       { icon: LayoutDashboard, text: 'Admin panel for products, orders & customers' },
       { icon: PieChart, text: 'Analytics, SEO & performance tuned' },
     ],
